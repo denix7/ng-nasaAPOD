@@ -5,23 +5,27 @@ import {
   MatToolbar,
   MatButtonModule,
   MatButton,
-  MatIconModule
+  MatIconModule,
+  MatExpansionModule
 } from '@angular/material';
 
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
+import { MaterialButtonComponent } from './material-button/material-button.component';
 
 @NgModule({
   imports: [
     CommonModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule
   ],
-  exports: [
+  exports: [//para usar en otros modules
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule
   ],
-  declarations: [MaterialDemoComponent]
+  declarations: [MaterialDemoComponent, MaterialButtonComponent]
 })
 export class MaterialModule { }
