@@ -6,7 +6,8 @@ import {
   MatButtonModule,
   MatButton,
   MatIconModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatSidenav
 } from '@angular/material';
 
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
