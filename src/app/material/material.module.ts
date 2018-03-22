@@ -11,7 +11,9 @@ import {
   MatFormField,
   MatInputModule,
   MatListModule,
-  MatCardModule 
+  MatCardModule,
+  MatSpinner,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
@@ -28,7 +30,8 @@ import { MaterialListComponent } from './material-list/material-list.component';
     MatExpansionModule,
     MatInputModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   exports: [//para usar en otros modules
     MatToolbarModule,
@@ -37,7 +40,8 @@ import { MaterialListComponent } from './material-list/material-list.component';
     MatExpansionModule,
     MatInputModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   declarations: [MaterialDemoComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent]
 })

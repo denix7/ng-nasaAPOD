@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 
 const APOD_URL = 'https://api.nasa.gov/planetary/apod';
-const API_KEY = 'eVGwuW02is2fDlnoNyyCB0cz08ySIpjdtmVNvv8W'
+const API_KEY = 'eVGwuW02is2fDlnoNyyCB0cz08ySIpjdtmVNvv8W';
 @Injectable()
 export class NasaApiService {
   //Dependency Injection: HttpClient
@@ -12,6 +12,8 @@ export class NasaApiService {
 
   getApod(): Observable<Apod>{
     //return this.DATA;
-    return this.httpClient.get<Apod>(APOD_URL + '?api_key=' + API_KEY);
+    // return this.httpClient.get<Apod>(APOD_URL + '?api_key=' + API_KEY);
+    // TEMPLATE LITERALS
+    return this.httpClient.get<Apod>(`${APOD_URL}?api_key=${API_KEY}`);
   }
 }
