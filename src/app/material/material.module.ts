@@ -10,7 +10,8 @@ import {
   MatSidenav,
   MatFormField,
   MatInputModule,
-  MatListModule
+  MatListModule,
+  MatCardModule 
 } from '@angular/material';
 
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
@@ -26,7 +27,8 @@ import { MaterialListComponent } from './material-list/material-list.component';
     MatIconModule,
     MatExpansionModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   exports: [//para usar en otros modules
     MatToolbarModule,
@@ -34,7 +36,8 @@ import { MaterialListComponent } from './material-list/material-list.component';
     MatIconModule,
     MatExpansionModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   declarations: [MaterialDemoComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent]
 })
