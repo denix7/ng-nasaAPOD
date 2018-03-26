@@ -1,12 +1,16 @@
 .card-container{
     align-items: center;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .card-content{
-    width: 800px;
-    margin: 10px auto;
+    width: 1200px;
+    margin: 10px;
+    box-sizing: border-box;
 }
 
 h3{
     text-align: center;
 }
+
