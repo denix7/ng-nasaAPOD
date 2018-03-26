@@ -1,4 +1,14 @@
 <div>
+    <mat-card>
+      <mat-form-field>
+        <mat-select placeholder = "Select a camera" [(ngModel)]="currentCamera">
+          <mat-option *ngFor="let camera of cameras" 
+                      [value]="camera" (click)="onSelectCamera(camera)">
+            {{camera}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> 
+    </mat-card>
     <mat-card *ngFor="let marsImage of marsImages">
       <mat-card-header>
         <mat-card-title>{{marsImage.rover.name}}</mat-card-title>

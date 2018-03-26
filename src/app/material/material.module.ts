@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule} from '@angular/forms';
 import {
   MatToolbarModule, 
   MatToolbar,
@@ -13,7 +14,8 @@ import {
   MatListModule,
   MatCardModule,
   MatSpinner,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatSelectModule
 } from '@angular/material';
 
 import { MaterialDemoComponent } from './material-demo/material-demo.component';
@@ -31,7 +33,9 @@ import { MaterialListComponent } from './material-list/material-list.component';
     MatInputModule,
     MatListModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule,
+    MatSelectModule
   ],
   exports: [//para usar en otros modules
     MatToolbarModule,
@@ -41,7 +45,9 @@ import { MaterialListComponent } from './material-list/material-list.component';
     MatInputModule,
     MatListModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule,
+    MatSelectModule
   ],
   declarations: [MaterialDemoComponent, MaterialButtonComponent, MaterialInputComponent, MaterialListComponent]
 })
