@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="marsImages">
     <mat-card>
       <mat-form-field>
         <mat-select placeholder = "Select a camera" [(ngModel)]="currentCamera">
@@ -20,4 +20,14 @@
             <img mat-card-image [src]="marsImage.img_src">
           </mat-card>
     </div>
+  </div>
+
+  <div class="card-container" *ngIf="!marsImages && !error">
+      <mat-spinner class="card-content"></mat-spinner>
+  </div>
+  
+  <div *ngIf="error">
+    <mat-card >
+      {{error}}
+    </mat-card>
   </div>

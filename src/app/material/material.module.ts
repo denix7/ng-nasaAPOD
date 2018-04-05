@@ -15,7 +15,8 @@ import {
   MatCardModule,
   MatSpinner,
   MatProgressSpinnerModule,
-  MatSelectModule
+  MatSelectModule,
+  MatSidenavContainer
 } from '@angular/material';
 
 import { MaterialDemoComponent } from './material-demo/material-demo.component';

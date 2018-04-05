@@ -11,11 +11,11 @@ export class NasaApiService {
   //Dependency Injection: HttpClient
   constructor(private httpClient: HttpClient) { }
 
-  getApod(): Observable<Apod>{
+  getApod(): Observable<any>{
     //return this.DATA;
     // return this.httpClient.get<Apod>(APOD_URL + '?api_key=' + API_KEY);
     // TEMPLATE LITERALS
-    return this.httpClient.get<Apod>(`${APOD_URL}?api_key=${API_KEY}`);
+    return this.httpClient.get(`${APOD_URL}?api_key=${API_KEY}`);
   }
 
   getMarsImages(camera: string): Observable<any>{

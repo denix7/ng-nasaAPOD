@@ -1,5 +1,5 @@
 <div class="card-container" *ngIf="apod">
-  <mat-card class="card-content">
+  <mat-card class="card-content" >
     <h3>Astronomy picture of the day</h3>
     <mat-card-header>
       <img mat-card-avatar src="https://scontent.fcbb1-1.fna.fbcdn.net/v/t1.0-9/22089114_1118497238282617_600728687054768318_n.png?oh=bdfb51e7f3b0e7ca980d4b60c6ba2574&oe=5B28447D" alt="">
@@ -10,12 +10,21 @@
     <img mat-card-image [src]="apod.url">
 
     <mat-card-content>
+      <h3>Explanation</h3>
       <p>{{apod.explanation}}</p>
     </mat-card-content>
 
+    <mat-card-content>
+      <p>Copyright: {{apod.copyright}}</p>
+    </mat-card-content>
+
     <mat-card-actions>
-      <button mat-button>Like</button>
-      <button mat-button>Share</button>
+        <button mat-fab color="primary">
+            <mat-icon>favorite</mat-icon>
+          </button>
+      <button mat-fab color="primary">
+          <mat-icon>open_in_new</mat-icon>
+       </button>
     </mat-card-actions>
   </mat-card>
 </div>

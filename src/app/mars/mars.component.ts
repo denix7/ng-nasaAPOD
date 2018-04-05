@@ -9,9 +9,10 @@ import { NasaApiService } from '../shared/services/nasa-api.service';
 })
 export class MarsComponent implements OnInit {
   marsImages: MarsImage[];
-  cameras: string[] = ['NAVCAM', 'MAST', 'CHEMCAM', 'FHAZ'];
+  cameras: string[] = ['NAVCAM', 'CHEMCAM', 'FHAZ', 'RHAZ', 'MAST'];
   currentCamera: string;
-  
+  error: string;
+
   //Inyeccion de Dependencias
   constructor(private servicio: NasaApiService) { }
 
@@ -29,6 +30,9 @@ export class MarsComponent implements OnInit {
     this.servicio.getMarsImages(camera)
       .subscribe(result => {
         this.marsImages = result.photos;
+      }, error=>{
+        console.log('Error al conectar con el servidor');
+        this.error = 'Error al conectar con el servidor';
       });
   }
 }
